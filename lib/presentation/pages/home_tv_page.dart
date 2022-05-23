@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class HomeTvPage extends StatefulWidget {
-  static const ROUTE_NAME = '/home_tv_page';
+  static const ROUTE_NAME = '/home_tv_pages';
 
   const HomeTvPage({Key? key}) : super(key: key);
 
