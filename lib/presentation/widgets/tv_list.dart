@@ -16,7 +16,7 @@ class TvList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final movie = tv[index];
+          final tvs = tv[index];
           return Container(
             padding: const EdgeInsets.all(8),
             child: InkWell(
@@ -24,13 +24,13 @@ class TvList extends StatelessWidget {
                 Navigator.pushNamed(
                   context,
                   TvDetailPage.ROUTE_NAME,
-                  arguments: movie.id,
+                  arguments: tvs.id,
                 );
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(16)),
                 child: CachedNetworkImage(
-                  imageUrl: '$BASE_IMAGE_URL${movie.posterPath}',
+                  imageUrl: '$BASE_IMAGE_URL${tvs.posterPath}',
                   placeholder: (context, url) => Center(
                     child: CircularProgressIndicator(),
                   ),
