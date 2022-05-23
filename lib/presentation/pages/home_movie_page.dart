@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 
 class HomeMoviePage extends StatefulWidget {
   static const ROUTE_NAME = '/home_movie_page';
+  static const ROUTE_NAME = '/home_movie_page';
   @override
   _HomeMoviePageState createState() => _HomeMoviePageState();
 }
