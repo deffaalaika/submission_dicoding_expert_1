@@ -25,7 +25,8 @@ class DatabaseHelper {
   static const String _tblWatchlist = 'watchlist';
   static const String _tblWatchlist2 = 'watchlist2';
 
-  static const List<String> tables = ['''
+  static const List<String> tables = [
+    '''
       CREATE TABLE  $_tblWatchlist (
         id INTEGER PRIMARY KEY,
         title TEXT,
@@ -37,17 +38,17 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY,
         name TEXT,
         overview TEXT,
-        posterPath TEXT
+         posterPath TEXT
       );
-    '''];
+    ''',];
 
 
   Future<Database> _initDb() async {
     final path = await getDatabasesPath();
     final databasePath = '$path/ditonton.db';
 
-    var db = await openDatabase(databasePath, version: 1, onCreate: _onCreate);
-    return db;
+  return openDatabase(databasePath, version: 2, onCreate: _onCreate);
+
   }
 
   void _onCreate(Database db, int version) async {
