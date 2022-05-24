@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 const String BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
+
 // colors
 const Color kRichBlack = Color(0xFF000814);
 const Color kOxfordBlue = Color(0xFF001D3D);
